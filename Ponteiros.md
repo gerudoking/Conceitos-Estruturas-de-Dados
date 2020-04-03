@@ -26,7 +26,7 @@ e com ele você pode obter o endereço de uma variável. No caso do código acim
 o endereço de `x`. Portanto, ao utilizarmos o operador de desreferência `*` em `ponteiro` como argumento da função `printf`,
 obtemos o conteúdo de `ponteiro` e, por consequência, o conteúdo de `x`. Um fato que pode ser atestado através dessa afirmação
 é: o caractere `*` possui mais de uma função. Além da função já citada no início do texto, se utilizado fora da declaração de uma
-variável e de forma unária (operando apenas sobre uma variável) e a esquerda desta, temos o operador de desreferência, ou de "conteúdo".
+variável e de forma unária (operando apenas sobre uma variável) e a esquerda desta, temos o operador de desreferência ou de "conteúdo".
 Basicamente, é dessa maneira que se recupera os valores que estão armazenados nas áreas de memória apontadas pelos ponteiros.
 
 
