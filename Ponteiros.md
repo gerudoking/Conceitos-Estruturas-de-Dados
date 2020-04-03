@@ -32,7 +32,7 @@ Basicamente, é dessa maneira que se recupera os valores que estão armazenados 
 
 ## Mais sobre ponteiros
 
-Como exercício, veja o código de exemplo(que está errado):
+Como exercício, veja o código de exemplo e diga se está correto:
 
 ```
 float x = 3.14;
@@ -43,10 +43,24 @@ short* q = &d;
 p = q;
 ```
 
-O porquê do código estar errado é que short e float são tipos diferentes de variável. Não somente isso, uma variável de cada
-um dos tipos ocupa um espaço diferente na memória. Em casos em que se quer atribuir a um ponteiro o valor apontado por outro ponteiro
-de tipos diferentes, a melhor solução seria fazer um **cast** do valor do segundo ponteiro, e atribuir esse valor como conteúdo do
-primeiro ponteiro.
+O código está errado. O porquê do código estar errado é que short e float são tipos diferentes de variável. Não somente isso, uma variável de cada um dos tipos ocupa um espaço diferente na memória. Em casos em que se quer atribuir a um ponteiro o valor apontado por outro ponteiro de tipos diferentes, a melhor solução seria fazer um **cast** do valor do segundo ponteiro, e atribuir esse valor como conteúdo do primeiro ponteiro.
+
+## Vetores
+
+Um vetor é, basicamente, uma variável que pode guardar múltiplos valores. Pode ser declarada(por exemplo) da maneira `int v[10]`. No caso, seria um vetor de inteiros com dez posições, que pode ter seus valores acessados via índice(o operador `[x]`, onde x é a posição que se deseja acessar no vetor). Vetores referenciam áreas de memória, portanto podem ser tratados como ponteiros.
+
+Um segundo exercício para que você julgue se está certo ou errado:
+
+```
+short a[32];
+
+for(int i = 0; i < 32; i++){
+  *a++ = i*i;
+}
+```
+
+O código parece confuso, mas está correto. Devido a precedência dos operadores de incremento e de desreferência, o incremento acontece antes de se obter o conteúdo de `a`. Isso significa que, basicamente, estamos iterando pelo vetor `a`, pois a cada iteração do loop, incrementa-se o endereço do ponteiro(o operador de incremento, ao ser aplicado sobre um ponteiro, o incrementa em uma quantidade igual ao tamanho de seu conteúdo). Como `a` é um vetor, o endereço passa a ser do segundo elemento de `a`(`a[1]`), e não mais do primeiro(`a[0]`). Logo em seguida, pegamos o conteúdo desse novo endereço e atribuimos a ele o valor de `i*i`.
 
 ## Referências
 [Typecasting int pointer to float pointer](https://stackoverflow.com/questions/30276645/typecasting-int-pointer-to-float-pointer)
+[C++ operator precedence](https://en.cppreference.com/w/cpp/language/operator_precedence)
