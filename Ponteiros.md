@@ -43,11 +43,11 @@ short* q = &d;
 p = q;
 ```
 
-O código está errado. O porquê do código estar errado é que short e float são tipos diferentes de variável. Não somente isso, uma variável de cada um dos tipos ocupa um espaço diferente na memória. Em casos em que se quer atribuir a um ponteiro o valor apontado por outro ponteiro de tipos diferentes, a melhor solução seria fazer um **cast** do valor do segundo ponteiro, e atribuir esse valor como conteúdo do primeiro ponteiro.
+O código está errado. O porquê do código estar errado é que short e float são tipos diferentes de variável. Não somente isso, uma variável de cada um dos tipos ocupa um espaço diferente na memória. Em casos em que se quer atribuir a um ponteiro o valor apontado por outro ponteiro de tipos diferentes, a melhor solução seria fazer um **cast** do valor do segundo ponteiro e atribuir esse valor como conteúdo do primeiro ponteiro.
 
 ## Vetores
 
-Um vetor é, basicamente, uma variável que pode guardar múltiplos valores. Pode ser declarada(por exemplo) da maneira `int v[10]`. No caso, seria um vetor de inteiros com dez posições, que pode ter seus valores acessados via índice(o operador `[x]`, onde x é a posição que se deseja acessar no vetor). Vetores referenciam áreas de memória, portanto podem ser tratados como ponteiros.
+Um vetor é uma variável que pode guardar múltiplos valores. Pode ser declarada(por exemplo) da maneira `int v[10]`. No caso, seria um vetor de inteiros com dez posições, que pode ter seus valores acessados via índice(o operador `[x]`, onde x é a posição que se deseja acessar no vetor). Vetores referenciam áreas de memória, portanto podem ser tratados como ponteiros.
 
 Um segundo exercício para que você julgue se está certo ou errado:
 
