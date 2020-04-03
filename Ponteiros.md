@@ -62,5 +62,5 @@ for(int i = 0; i < 32; i++){
 O código parece confuso, mas está correto. Devido a precedência dos operadores de incremento e de desreferência, o incremento acontece antes de se obter o conteúdo de `a`. Isso significa que, basicamente, estamos iterando pelo vetor `a`, pois a cada iteração do loop, incrementa-se o endereço do ponteiro(o operador de incremento, ao ser aplicado sobre um ponteiro, o incrementa em uma quantidade igual ao tamanho de seu conteúdo). Como `a` é um vetor, o endereço passa a ser do segundo elemento de `a`(`a[1]`), e não mais do primeiro(`a[0]`). Logo em seguida, pegamos o conteúdo desse novo endereço e atribuimos a ele o valor de `i*i`.
 
 ## Referências
-[Typecasting int pointer to float pointer](https://stackoverflow.com/questions/30276645/typecasting-int-pointer-to-float-pointer)
-[C++ operator precedence](https://en.cppreference.com/w/cpp/language/operator_precedence)
+1. [Typecasting int pointer to float pointer](https://stackoverflow.com/questions/30276645/typecasting-int-pointer-to-float-pointer)
+2. [C++ operator precedence](https://en.cppreference.com/w/cpp/language/operator_precedence)
